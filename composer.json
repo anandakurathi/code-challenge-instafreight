@@ -1,0 +1,16 @@
+{
+    "name": "root/review-refactor",
+    "autoload": {
+        "psr-4": {
+            "App\\": "App/"
+        }
+    },
+    "authors": [
+        {
+            "name": "anand"
+        }
+    ],
+    "require": {
+        "ext-curl": "^7.3"
+    }
+}
