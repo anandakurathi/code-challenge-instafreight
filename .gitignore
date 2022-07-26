@@ -4,3 +4,9 @@
 
 .idea
 /.idea
+
+db-data
+/db-data
+
+/postgres-data
+postgres-data
