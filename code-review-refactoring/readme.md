@@ -9,5 +9,20 @@ You are the owner of the component this functionality belongs to and are respons
 
 
 ## Refactoring
-
 Refactor the code to meet best practices and modern coding standards.
+
+### Installation
+
+```
+#Install dependencies
+compose install
+
+#Open on browser 
+http://review-refactor.loc/code-review-refactoring/
+
+#Tests
+./vendor/bin/phpunit tests/
+```
+
+### Timeline taken
+To Solve the Sudoku, it took 8 Hours.

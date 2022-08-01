@@ -18,7 +18,7 @@ If you observe the PHPUnit test script. I have followed the general rules only. 
 3. No duplicates in rows and columns. Empty places are filled with zeros. While validating this condition ignored zeros.  Checked Input & output for duplicates. Checked in **testDuplicatesInSudokuRowsAndColumns** & **testDuplicateValuesExceptZerosInInput**
 4. After rows & Columns are validated, final test for Grids level check. There are 9 grids (3X3). All these need to be validated for duplicate values in grid. This is accomplished in **testGridsHasDuplicatesOrNot**
 
-### timeline taken
+### Timeline taken
 To Solve the Sudoku, it took 12 Hours. To validate the Sudoku output, it took 4 Hours.
 
 

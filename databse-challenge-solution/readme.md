@@ -46,3 +46,10 @@ Merge joins generally have a complexity of O(M+N) but it will heavily depend on 
 Complexity annotation (such as O ) describes the way an algorithm's performance (e.g. time or space) is dependent on the size of the input. It is "blind" to a specific input. When you write O(m+n) it means that the algorithm will take **O(m) time when m>n and O(n) when m<n**.
 
 If the Query Optimizer chooses to use the index, then it'll first select rows based on the index and then apply a filter with the remaining constraints. Thus reducing the second filtering operation from O(number of rows) to O(number of selected rows by index). The ratio between these two number is called selectivity and an important statistic when choosing which index to use.
+
+
+### Installation
+`docker-compose up -d`
+
+### Timeline taken
+To Solve the Sudoku, it took 6 Hours.
