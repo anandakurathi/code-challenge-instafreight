@@ -20,3 +20,19 @@ If you observe the PHPUnit test script. I have followed the general rules only. 
 
 ### timeline taken
 To Solve the Sudoku, it took 12 Hours. To validate the Sudoku output, it took 4 Hours.
+
+
+### Installation
+
+```
+#Install dependencies
+compose install
+
+#Open on browser 
+http://review-refactor.loc/sudoku-challenge/
+
+#Tests
+./vendor/bin/phpunit tests/
+```
+
+![Sudoku solved](Screenshot%202022-08-01%20at%2010.03.48%20PM.png)
