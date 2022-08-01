@@ -156,7 +156,7 @@ class Sudoku
      * @param array $array
      * @return bool
      */
-    private function checkDuplicatesInArray(array $array): bool
+    public function checkDuplicatesInArray(array $array): bool
     {
         if (!$array) {
             return false;

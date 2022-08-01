@@ -21,7 +21,7 @@ class SudokuTest extends TestCase
      * @return void
      * @throws SudokuException
      */
-    public function testInput()
+    public function testInput(): void
     {
         $input = array(
             array(0, 3, 0, 0, 5, 6, 0, 0, 0),
@@ -85,7 +85,7 @@ class SudokuTest extends TestCase
         $this->sudoku->input($input);
     }
 
-    public function testDuplicateValuesExceptZeros()
+    public function testDuplicateValuesExceptZerosInInput()
     {
         $duplicateInputRow = array(
             array(0, 3, 0, 0, 5, 6, 5, 0, 0),
@@ -141,5 +141,47 @@ class SudokuTest extends TestCase
         $this->assertEquals($input[8][2], $solved[8][2]);
 
         return $solved;
+    }
+
+    /**
+     * @depends testPreSetValuesInOutput
+     * @param $sudokuOutput
+     * @return void
+     */
+    public function testDuplicatesInSudokuRowsAndColumns($sudokuOutput): void
+    {
+        $columns = [];
+        foreach ($sudokuOutput as $row) {
+            $this->assertFalse($this->sudoku->checkDuplicatesInArray($row));
+            for ($i = 0; $i < 9; $i++) {
+                $columns[$i][] = $row[$i];
+            }
+        }
+
+        foreach ($columns as $column) {
+            $this->assertFalse($this->sudoku->checkDuplicatesInArray($column));
+        }
+    }
+
+    /**
+     * @depends testPreSetValuesInOutput
+     * @param $sudokuOutput
+     * @return void
+     */
+    public function testGridsHasDuplicatesOrNot($sudokuOutput): void
+    {
+        for ($row = 0; $row < 9; $row += 3) {
+            for ($col = 0; $col < 9; $col += 3) {
+                $temp = array();
+                // validate each 3x3 grid
+                for ($x = 0; $x < $row + 3; $x++) {
+                    for ($y = 0; $y < $col + 3; $y++) {
+                        $temp[] = $sudokuOutput[$x][$y];
+                    }
+                }
+
+                $this->assertCount(9, array_unique($temp));
+            }
+        }
     }
 }
