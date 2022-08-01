@@ -9,10 +9,6 @@ services:
       - POSTGRES_PASSWORD=postgres
       - POSTGRES_DB=postgres
 
-    # The `env_file` tag allows us to declare an environment file
-    env_file:
-      - .env # The name of your environment file (the one at the repository root)
-
     logging:
       options:
         max-size: 10m
